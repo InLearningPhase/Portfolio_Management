@@ -1,0 +1,19 @@
+<h1 style="text-align: center; margin-top: 10px;">Login or Register to continue</h1>
+
+  <form [formGroup]="form">
+    <div class="mb-3">
+      <label>Username</label>
+      <input class="form-control" name="name" formControlName="name">
+    </div>
+    <div class="mb-3">
+      <label>Password</label>
+      <input class="form-control" name="password" formControlName="password">
+    </div>
+  
+    <div style="text-align: center; margin-top: 20px;">
+      <button class="btn btn-primary" (click)="login()">Login</button>
+      <button class="btn btn-primary" (click)="register()">Register</button>
+      
+    </div>  
+  
+  </form>

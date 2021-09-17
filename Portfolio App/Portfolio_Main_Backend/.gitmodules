@@ -1,0 +1,18 @@
+[submodule "submodules/Portfolio-Main-Entities"]
+	path = submodules/Portfolio-Main-Entities
+	url = https://github.com/InLearningPhase/Portfolio-Main-Entities
+[submodule "submodules/Portfolio-Platform-Framework"]
+	path = submodules/Portfolio-Platform-Framework
+	url = https://github.com/InLearningPhase/Portfolio-Platform-Framework
+[submodule "submodules/Portfolio-Main-Dtos"]
+	path = submodules/Portfolio-Main-Dtos
+	url = https://github.com/InLearningPhase/Portfolio-Main-Dtos
+[submodule "submodules/Portfolio-Main-Mapper"]
+	path = submodules/Portfolio-Main-Mapper
+	url = https://github.com/InLearningPhase/Portfolio-Main-Mapper
+[submodule "submodules/Portfolio-Main-RabbitMQConfig"]
+	path = submodules/Portfolio-Main-RabbitMQConfig
+	url = https://github.com/InLearningPhase/Portfolio-Main-RabbitMQConfig
+[submodule "submodules/Portfolio-Platform-Common"]
+	path = submodules/Portfolio-Platform-Common
+	url = https://github.com/InLearningPhase/Portfolio-Platform-Common

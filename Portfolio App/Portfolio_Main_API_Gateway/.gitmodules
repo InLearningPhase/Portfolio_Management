@@ -1,0 +1,6 @@
+[submodule "submodules/Portfolio-Api-Gateway-Common"]
+	path = submodules/Portfolio-Api-Gateway-Common
+	url = https://github.com/InLearningPhase/Portfolio-Api-Gateway-Common
+[submodule "submodules/Portfolio-Main-Api-Gateway-RabbiMQConfig"]
+	path = submodules/Portfolio-Main-Api-Gateway-RabbiMQConfig
+	url = https://github.com/InLearningPhase/Portfolio-Main-Api-Gateway-RabbiMQConfig

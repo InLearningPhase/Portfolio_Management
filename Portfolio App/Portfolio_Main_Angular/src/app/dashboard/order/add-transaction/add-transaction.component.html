@@ -1,0 +1,54 @@
+<form [formGroup]="form" novalidate>
+  <div class="mb-3">
+    <label>Ticker Symbol</label>
+    <select name="ticker_symbol" class="form-control" formControlName="ticker_symbol">
+      <option *ngFor="let stock of stocks">
+        {{stock.ticker_symbol}}
+      </option>
+    </select>
+  </div>
+  <div
+    *ngIf="form.controls['ticker_symbol'].invalid && (form.controls['ticker_symbol'].dirty || form.controls['ticker_symbol'].touched)"
+    class="alert alert-danger">
+    <div *ngIf="form.controls['ticker_symbol'].errors.required">
+      Ticker Symbol is required.
+    </div>
+  </div>
+  <button class="btn btn-outline-secondary" (click)="getStockInfo()">Get Info</button>
+  <div class="mb-3">
+    <label>Company Name</label>
+    <input class="form-control" name="company_name" formControlName="company_name">
+  </div>
+  <div
+    *ngIf="form.controls['company_name'].invalid && (form.controls['company_name'].dirty || form.controls['company_name'].touched)"
+    class="alert alert-danger">
+    <div *ngIf="form.controls['company_name'].errors.required">
+      Company Name is required.
+    </div>
+  </div>
+  <div class="mb-3">
+    <label>Current Price</label>
+    <input class="form-control" name="buy_price" formControlName="buy_price">
+  </div>
+  <div
+    *ngIf="form.controls['buy_price'].invalid && (form.controls['buy_price'].dirty || form.controls['buy_price'].touched)"
+    class="alert alert-danger">
+    <div *ngIf="form.controls['buy_price'].errors.required">
+      Current Price is required.
+    </div>
+  </div>
+  <div class="mb-3">
+    <label>Shares</label>
+    <input class="form-control" name="share" formControlName="share">
+  </div>
+  <div *ngIf="form.controls['share'].invalid && (form.controls['share'].dirty || form.controls['share'].touched)"
+    class="alert alert-danger">
+    <div *ngIf="form.controls['share'].errors.required">
+      Share is required.
+    </div>
+  </div>
+
+  <button [disabled]="form.pristine || form.invalid" class="btn btn-outline-secondary" (click)="buyShare()">Buy</button>
+  <button [disabled]="form.pristine || form.invalid" class="btn btn-outline-secondary"
+    (click)="sellShare()">Sell</button>
+</form>
