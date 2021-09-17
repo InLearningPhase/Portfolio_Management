@@ -1,0 +1,18 @@
+<form [formGroup]="form" >
+    <div class="mb-3">
+      <label>Tenant User ID</label>
+      <input class="form-control" name="tenant_user_id" formControlName="tenant_user_id">
+    </div>
+    <div class="mb-3">
+      <label>Tenant App ID</label>
+      <input class="form-control" name="tenant_app_id" formControlName="tenant_app_id">
+    </div>
+    <div class="mb-3">
+      <label>Tenant User App Permissions</label>
+      <input class="form-control" name="tenant_user_app_permissions" formControlName="tenant_user_app_permissions">
+    </div>
+  
+  
+    <button class="btn btn-outline-secondary" *ngIf="!id" (click)="addTenantUserApp()">Add Tenant User App</button>
+    <button class="btn btn-outline-secondary" *ngIf="id" (click)="updateTenantUserApp()">Update Tenant User App</button>
+  </form>

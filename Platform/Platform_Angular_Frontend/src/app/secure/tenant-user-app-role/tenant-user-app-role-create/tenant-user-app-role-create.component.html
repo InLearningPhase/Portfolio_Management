@@ -1,0 +1,13 @@
+<form [formGroup]="form" >
+    <div class="mb-3">
+      <label>Tenant User App ID</label>
+      <input class="form-control" name="tenant_user_app_id" formControlName="tenant_user_app_id">
+    </div>
+    <div class="mb-3">
+      <label>Role ID</label>
+      <input class="form-control" name="role_id" formControlName="role_id">
+    </div> 
+  
+    <button class="btn btn-outline-secondary" *ngIf="!id" (click)="addTenantUserAppRole()">Add Tenant User App Role</button>
+    <button class="btn btn-outline-secondary" *ngIf="id" (click)="updateTenantUserAppRole()">Update Tenant User App Role</button>
+  </form>

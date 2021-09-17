@@ -1,0 +1,14 @@
+<form [formGroup]="form" >
+    <div class="mb-3">
+      <label>Tenant App ID</label>
+      <input class="form-control" name="tenant_app_id" formControlName="tenant_app_id">
+    </div>
+    <div class="mb-3">
+      <label>Feature ID</label>
+      <input class="form-control" name="feature_id" formControlName="feature_id">
+    </div>
+    
+  
+    <button class="btn btn-outline-secondary" *ngIf="!id" (click)="addTenantAppFeature()">Add Tenant App Feature</button>
+    <button class="btn btn-outline-secondary" *ngIf="id" (click)="updateTenantAppFeature()">Update Tenant App Feature</button>
+  </form>

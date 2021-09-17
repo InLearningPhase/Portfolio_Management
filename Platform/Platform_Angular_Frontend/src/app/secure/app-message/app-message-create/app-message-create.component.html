@@ -1,0 +1,34 @@
+<form [formGroup]="form">
+    <div class="mb-3">
+        <label>User ID</label>
+        <input class="form-control" name="user_id" formControlName="user_id">
+    </div>
+    <div class="mb-3">
+        <label>Tenant ID</label>
+        <input class="form-control" name="tenant_id" formControlName="tenant_id">
+    </div>
+    <div class="mb-3">
+        <label>App ID</label>
+        <input class="form-control" name="app_id" formControlName="app_id">
+    </div>
+    <div class="mb-3">
+        <label>Is Notification</label>
+        <input class="form-control" name="is_notification" formControlName="is_notification">
+    </div>
+    <div class="mb-3">
+        <label>Subject</label>
+        <input class="form-control" name="subject" formControlName="subject">
+    </div>
+    <div class="mb-3">
+        <label>Message Body</label>
+        <input class="form-control" name="message_body" formControlName="message_body">
+    </div>
+    <div class="mb-3">
+        <label>Is read</label>
+        <input class="form-control" name="is_read" formControlName="is_read">
+    </div>
+
+
+    <button class="btn btn-outline-secondary" *ngIf="!id" (click)="addAppMessage()">Add App Message</button>
+    <button class="btn btn-outline-secondary" *ngIf="id" (click)="updateAppMessage()">Update App Message</button>
+</form>

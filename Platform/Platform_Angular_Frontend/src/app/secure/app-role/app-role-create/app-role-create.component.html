@@ -1,0 +1,18 @@
+<form [formGroup]="form" >
+    <div class="mb-3">
+      <label>Role ID</label>
+      <input class="form-control" name="role_id" formControlName="role_id">
+    </div>
+    <div class="mb-3">
+      <label>App ID</label>
+      <input class="form-control" name="app_id" formControlName="app_id">
+    </div>
+    <div class="mb-3">
+        <label>App Role Permission</label>
+        <input class="form-control" name="app_role_permissions" formControlName="app_role_permissions">
+      </div>
+  
+  
+    <button class="btn btn-outline-secondary" *ngIf="!id" (click)="addAppRole()">Add App Role</button>
+    <button class="btn btn-outline-secondary" *ngIf="id" (click)="updateAppRole()">Update App Role</button>
+  </form>

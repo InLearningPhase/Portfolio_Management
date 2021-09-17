@@ -1,0 +1,14 @@
+<form [formGroup]="form" >
+    <div class="mb-3">
+      <label>App Name</label>
+      <input class="form-control" name="app_name" formControlName="app_name">
+    </div>
+    <div class="mb-3">
+      <label>App Description</label>
+      <input class="form-control" name="app_description" formControlName="app_description">
+    </div>
+  
+  
+    <button class="btn btn-outline-secondary" *ngIf="!id" (click)="addApp()">Add App</button>
+    <button class="btn btn-outline-secondary" *ngIf="id" (click)="updateApp()">Update App</button>
+  </form>
